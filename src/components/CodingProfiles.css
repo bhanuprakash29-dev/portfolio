@@ -1,0 +1,130 @@
+.coding-profiles-section {
+  position: relative;
+  padding-top: 3rem !important;
+  padding-bottom: 8rem;
+}
+
+.coding-profiles-section h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 2.5rem;
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(18, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s var(--transition-bounce);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--profile-color);
+  background: rgba(18, 18, 24, 0.8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  color: var(--profile-color);
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+.profile-card:hover .profile-icon-wrapper {
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.profile-brand-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+}
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stat-item {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.stat-item strong {
+  color: var(--text-primary);
+}
+
+.profile-arrow {
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.profile-card:hover .profile-arrow {
+  color: var(--profile-color);
+  transform: translate(5px, -5px);
+  opacity: 1;
+}
+
+.card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--profile-color);
+  transition: width 0.4s ease;
+}
+
+.profile-card:hover .card-accent {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+  
+  .profile-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .profile-info h3 {
+    font-size: 1.3rem;
+  }
+}

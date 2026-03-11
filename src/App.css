@@ -1,0 +1,11 @@
+/* Application specific layout styles not covered via utility classes */
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}

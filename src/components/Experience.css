@@ -1,0 +1,277 @@
+.experience-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Blobs for depth */
+.experience-section .bg-blob {
+  position: absolute;
+  filter: blur(120px);
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.experience-section .blob-1 {
+  top: 10%;
+  right: -5%;
+  width: 35vw;
+  height: 35vw;
+  background: rgba(129, 140, 248, 0.3);
+  border-radius: 50%;
+}
+
+.experience-section .blob-2 {
+  bottom: 10%;
+  left: -5%;
+  width: 30vw;
+  height: 30vw;
+  background: rgba(192, 132, 252, 0.3);
+  border-radius: 50%;
+}
+
+.experience-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.subsection-wrapper {
+  margin-top: 5rem;
+}
+
+.subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.4rem;
+  color: var(--accent-primary);
+  margin-bottom: 3rem;
+  font-family: var(--font-display);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.title-icon {
+  color: var(--accent-primary);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.exp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 3rem;
+  border-radius: 24px;
+  background: rgba(18, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s var(--transition-bounce);
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.exp-row:hover {
+  transform: translateX(15px);
+  border-color: rgba(99, 102, 241, 0.35);
+  background: rgba(25, 25, 30, 0.85);
+  box-shadow: -15px 0 40px rgba(99, 102, 241, 0.08);
+}
+
+.exp-company-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-width: 300px;
+}
+
+.exp-logo-box {
+  width: 60px;
+  height: 60px;
+  background: white;
+  padding: 10px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exp-row:hover .exp-logo-box {
+  transform: none;
+}
+
+.exp-logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.exp-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.exp-company-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.exp-duration {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.exp-details {
+  flex: 1;
+}
+
+.exp-role-title {
+  font-size: 1.65rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.exp-row:hover .exp-role-title {
+  color: var(--accent-primary);
+}
+
+.exp-text {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.exp-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.exp-skill-tag {
+  font-size: 0.95rem;
+  padding: 0.3rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.exp-row:hover .exp-skill-tag {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: var(--accent-primary);
+}
+
+.exp-action {
+  display: flex;
+  align-items: center;
+}
+
+.exp-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+.exp-visit-btn:hover {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.3);
+}
+
+/* Mentoring Specifics */
+.mentorship-cert-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mentorship-certificate-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.5rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 14px;
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.badge-icon {
+  color: #f59e0b;
+}
+
+@media (max-width: 1100px) {
+  .exp-row {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .exp-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+  
+  .exp-row:hover {
+    transform: translateY(-8px);
+  }
+  
+  .exp-company-info {
+    min-width: auto;
+  }
+  
+  .exp-action {
+    width: 60%;
+  }
+  
+  .exp-visit-btn, .mentorship-certificate-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .exp-action {
+    width: 100%;
+  }
+}
